@@ -16,5 +16,8 @@
     },
     "replace": {
         "empty_colpos_content": "self.version"
+    },
+    "require": {
+        "typo3/cms-core": "^8.7"
     }
 }
