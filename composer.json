@@ -1,0 +1,20 @@
+{
+    "name": "supseven/empty_colpos_content",
+    "type": "typo3-cms-extension",
+    "description": "XClass for for hooking into empty colpos Layouts",
+    "authors": [
+        {
+            "name": "Volker Kemeter",
+            "role": "Developer"
+        }
+    ],
+    "license": ["GPL-2.0-or-later"],
+    "autoload": {
+        "psr-4": {
+            "Supseven\\EmptyColposContent\\": "Classes/"
+        }
+    },
+    "replace": {
+        "empty_colpos_content": "self.version"
+    }
+}

@@ -1,0 +1,2 @@
+# cat=config/enable; type=boolean; label=LLL:EXT:empty_colpos_content/Resources/Private/Language/locallang_be.xlf:config.adminOnly
+adminOnly = 1
