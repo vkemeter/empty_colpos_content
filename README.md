@@ -18,4 +18,50 @@ If no own Hook is used, with installation of this Extension, an Example Hook is 
 
 Use Extension Configuration to make this visible to all or just admin Users.
 
+Example BackendLayout Config
+```
+mod {
+	web_layout {
+		BackendLayouts {
+			Default {
+				title = Home
+				config {
+					backend_layout {
+						colCount = 1
+						rowCount = 3
+						rows {
+							1 {
+								columns {
+									1 {
+										name = Main
+										colPos = 0
+									}
+								}
+							}
+							2 {
+								columns {
+									1 {
+										name = Something
+										emptyColPos = 0
+									}
+								}
+							}
+							3 {
+								columns {
+									1 {
+										name = Something Else
+										emptyColPos = 1
+									}
+								}
+							}
+                        }
+					}
+				}
+			}
+		}
+	}
+}
+
+```
+
 KTHXBYE! Volker.

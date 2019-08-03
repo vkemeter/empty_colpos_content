@@ -1,22 +1,46 @@
-<div class="t3-page-ce-wrapper">
-    <div class="t3-page-ce">
-        <div class="t3-page-ce-header">{headline}</div>
+<f:switch expression="{emptyColPos}">
+    <f:case value="1">
+        <div class="t3-page-ce-wrapper">
+            <div class="t3-page-ce">
+                <div class="t3-page-ce-header">{headline}</div>
 
-        <div class="t3-page-ce-body">
-            <div class="t3-page-ce-body-inner">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <img src="//via.placeholder.com/150" alt="Placeholder" />
+                <div class="t3-page-ce-body">
+                    <div class="t3-page-ce-body-inner">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="//via.placeholder.com/150" alt="Placeholder" />
+                            </div>
+                            <div class="col-sm-9">
+                                {text -> f:format.html()}
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm-9">
-                        {text -> f:format.html()}
+
+                    <div class="t3-page-ce-footer">
+                        <div class="t3-page-ce-info">{footer}</div>
                     </div>
                 </div>
             </div>
+        </div>
+    </f:case>
 
-            <div class="t3-page-ce-footer">
-                <div class="t3-page-ce-info">{footer}</div>
+    <f:defaultCase>
+        <div class="t3-page-ce-wrapper">
+            <div class="t3-page-ce">
+                <div class="t3-page-ce-header">NO NO NO!</div>
+
+                <div class="t3-page-ce-body">
+                    <div class="t3-page-ce-body-inner">
+                        <div class="row">
+                            <div class="col-sm-12">use emptyColPos as a ID in the BackendLayoutConfig to handle specific colpos to place content in</div>
+                        </div>
+                    </div>
+
+                    <div class="t3-page-ce-footer">
+                        <div class="t3-page-ce-info">{footer}</div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+    </f:defaultCase>
+</f:switch>
